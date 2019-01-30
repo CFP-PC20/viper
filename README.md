@@ -12,3 +12,5 @@
     - Fausto Humberto Davila
     - José Juan Vigil López
   
+**Descripción del proyecto:**
+El clásico juego de snake programado en Javascript utilizando la librería P5.JS
