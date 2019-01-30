@@ -14,8 +14,9 @@ function Serpiente() {
         this.y = this.y + this.ySpeed;
     }
 
-    this.draw = function () {
+    this.draw = function ( drawx, drawy ) {
         fill(255);
-        rect(this.x, this.y, 10, 10);
+        rect(drawx, drawy, 10, 10);
     }
+
 }
