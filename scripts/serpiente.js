@@ -13,7 +13,7 @@ function Serpiente() {
         if (this.x<0){
             this.x=width;
         }else if (this.x>width){
-            this.x=0;
+            this.x=-10;
         }
         if (this.y<0){
             this.y=height;
