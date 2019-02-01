@@ -1,5 +1,6 @@
 var food;
 var speed = 10;
+var score = 0;
 
 function setup() {    
     createCanvas(400, 400);
@@ -32,8 +33,10 @@ function draw() {
 function update() {
     if(serpiente.x == food.x && serpiente.y == food.y){
         cuerpo.add();
+	score++;
         pickLocation();
     }
+    document.getElementById("score").innerHTML = score;
 }
 
 function keyPressed() {

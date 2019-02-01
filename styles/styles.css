@@ -13,6 +13,8 @@ body {
     align-items: center;
     align-content: center;
     flex-direction: column-reverse;
+
+    background-color: lightgray;
 }
 
 span{
@@ -29,7 +31,7 @@ span{
     text-align: center;
 }
 
-#score {
+#marcador {
     order: 3;
     font-size: 25px;
     padding-top: 5px;
