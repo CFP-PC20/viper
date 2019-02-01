@@ -18,7 +18,7 @@ function Serpiente() {
         if (this.y<0){
             this.y=height;
         }else if (this.y>height){
-            this.y=0;
+            this.y=-10;
         }
         
         this.x = this.x + this.xSpeed;

@@ -1,8 +1,7 @@
 var food;
 var speed = 10;
 
-function setup() {
-    
+function setup() {    
     createCanvas(400, 400);
     serpiente = new Serpiente();
     cuerpo = new Cuerpo();
