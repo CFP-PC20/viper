@@ -1,6 +1,7 @@
 var food;
 var speed = 10;
 var score = 0;
+var lastDir = "";
 
 function setup() {    
     createCanvas(400, 400);
@@ -43,20 +44,33 @@ function update() {
 function keyPressed() {
     switch (keyCode) {
     case DOWN_ARROW:
-        serpiente.dir(0, speed);
+	if (lastDir != "up") {
+            serpiente.dir(0, speed);
+	    lastDir = "down";
+	}
         break;
     case UP_ARROW:
-        serpiente.dir(0, -speed);
+	if (lastDir != "down") {
+            serpiente.dir(0, -speed);
+	    lastDir = "up";
+	}
         break;
+	
     case RIGHT_ARROW:
-        serpiente.dir(speed, 0);
-        break;
+	if (lastDir != "left") {
+            serpiente.dir(speed, 0);
+	    lastDir = "right";
+	}
+	break;
     case LEFT_ARROW:
-        serpiente.dir(-speed, 0);
+        if (lastDir != "right") {
+	    serpiente.dir(-speed, 0);
+	    lastDir = "left";
+	}
         break;
     case 77:
         //letra m. eliminar y llevar contenido a la funcion que detecta si la serpiente esta sobre la comida
-	    cuerpo.add();
+	cuerpo.add();
         break;
     }
 }
