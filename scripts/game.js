@@ -2,6 +2,7 @@ var food;
 var speed = 10;
 var score = 0;
 var lastDir = "";
+var lastPressed = "";
 
 function setup() {    
     createCanvas(400, 400);
@@ -28,7 +29,7 @@ function draw() {
     cuerpo.death(); 
     cuerpo.update(); 
     cuerpo.draw();
-
+	lastDir = lastPressed;
     update();
 }
 
@@ -45,27 +46,27 @@ function keyPressed() {
     switch (keyCode) {
     case DOWN_ARROW:
 	if ((lastDir != "up") || (score == 0)) {
+	    lastPressed = "down";
             serpiente.dir(0, speed);
-	    lastDir = "down";
 	}
         break;
     case UP_ARROW:
 	if ((lastDir != "down") || (score == 0)) {
+	    lastPressed = "up";
 	    serpiente.dir(0, -speed);
-	    lastDir = "up";
 	}
         break;
 	
     case RIGHT_ARROW:
 	if ((lastDir != "left") || (score == 0)) {
+	    lastPressed = "right";
             serpiente.dir(speed, 0);
-	    lastDir = "right";
 	}
 	break;
     case LEFT_ARROW:
         if ((lastDir != "right") || (score == 0)) {
+	    lastPressed = "left";
 	    serpiente.dir(-speed, 0);
-	    lastDir = "left";
 	}
         break;
 	/* Para propositos de debugging
