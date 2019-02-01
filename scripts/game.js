@@ -44,39 +44,35 @@ function update() {
 function keyPressed() {
     switch (keyCode) {
     case DOWN_ARROW:
-	if (lastDir != "up") {
+	if ((lastDir != "up") || (score == 0)) {
             serpiente.dir(0, speed);
 	    lastDir = "down";
 	}
         break;
     case UP_ARROW:
-	if (lastDir != "down") {
-            serpiente.dir(0, -speed);
+	if ((lastDir != "down") || (score == 0)) {
+	    serpiente.dir(0, -speed);
 	    lastDir = "up";
 	}
         break;
 	
     case RIGHT_ARROW:
-	if (lastDir != "left") {
+	if ((lastDir != "left") || (score == 0)) {
             serpiente.dir(speed, 0);
 	    lastDir = "right";
 	}
 	break;
     case LEFT_ARROW:
-        if (lastDir != "right") {
+        if ((lastDir != "right") || (score == 0)) {
 	    serpiente.dir(-speed, 0);
 	    lastDir = "left";
 	}
         break;
-    case 77:
-        //letra m. eliminar y llevar contenido a la funcion que detecta si la serpiente esta sobre la comida
-	cuerpo.add();
-        break;
+	/* Para propositos de debugging
+	   case 77:
+	  cuerpo.add();
+	  break; */
     }
-}
-
-function mousePressed() {
-
 }
 
 function drawRectangle ( drawx, drawy ) {

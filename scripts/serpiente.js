@@ -24,14 +24,11 @@ function Serpiente() {
         this.x = this.x + this.xSpeed;
         this.y = this.y + this.ySpeed;
         console.log("("+ this.x + "," + this.y + ")")
-
     }
 
     this.draw = function ( drawx, drawy ) {
         fill(255);
         rect(drawx, drawy, 10, 10);
-
-        
     }
 
 }
