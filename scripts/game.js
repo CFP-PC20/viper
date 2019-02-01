@@ -23,7 +23,8 @@ function draw() {
 
     fill(255, 0, 100);
     rect(food.x,food.y, 10, 10);
-
+    
+    cuerpo.death(); 
     cuerpo.update(); 
     cuerpo.draw();
 
