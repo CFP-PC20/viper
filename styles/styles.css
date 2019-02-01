@@ -1,5 +1,6 @@
 html, body {
     height: 100%;
+    font-family: 'Krub', sans-serif;
 }
 body {
     margin: 0;
@@ -13,6 +14,25 @@ body {
     align-content: center;
     flex-direction: column-reverse;
 }
+
+span{
+    background-color: rgb(51, 51, 51);
+    color: white;
+    width: 400px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
 #titulo {
-    font-size: 5em;
+    font-size: 40px;
+    border-radius: 0 0 7px 7px;
+    text-align: center;
+}
+
+#score {
+    order: 3;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 7px 7px 0 0;
 }
