@@ -16,12 +16,11 @@
 El clásico juego de snake programado en Javascript utilizando la librería P5.JS
 
 El programa contiene 3 archivos de scripts:
--game.js: donde se definen las principales mecanicas del juego con las funciones que dibujan el tablero, 
+- *game.js*: donde se definen las principales mecánicas del juego con las funciones que dibujan el tablero, 
 elegir ubicación aleatoria para la comida, la actualización y el dibujo de la serpiente y la respuesta 
 según teclas de dirección.
--serpiente.js: se define el objeto serpiente con las funciones que actualizan su posición y el dibujo de la cabeza.
--cuerpo.js: contiene las funciones que hacen alargar la serpiente y reducir otra vez a su tamaño inicial si choca
-contra sí misma  
 
-**Enlace al GitHub**
-https://github.com/CFP-PC20/viper
+- *serpiente.js*: se define el objeto serpiente con las funciones que actualizan su posición y el dibujo de la cabeza.
+
+- *cuerpo.js*: contiene las funciones que hacen alargar la serpiente y reducir otra vez a su tamaño inicial si choca
+contra sí misma.
